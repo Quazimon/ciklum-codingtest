@@ -1,5 +1,3 @@
-using System;
-
 namespace Qzk.CodingTest.Models
 {
     public class ErrorViewModel

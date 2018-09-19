@@ -1,14 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
+﻿using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Http;
-using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Qzk.CodingTest.Core.JustEat.Queries;
+using Qzk.CodingTest.Core.JustEat.Queries.Impl;
+using Qzk.CodingTest.Core.Services;
+using Qzk.CodingTest.Core.Services.Impl;
+using Qzk.CodingTest.Entities.Settings;
 
 namespace Qzk.CodingTest
 {
@@ -24,15 +23,10 @@ namespace Qzk.CodingTest
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<CookiePolicyOptions>(options =>
-            {
-                // This lambda determines whether user consent for non-essential cookies is needed for a given request.
-                options.CheckConsentNeeded = context => true;
-                options.MinimumSameSitePolicy = SameSiteMode.None;
-            });
-
-
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.Configure<JustEatApiSettings>(Configuration.GetSection("JustEatApiSettings"));
+            services.AddSingleton<IRestaurantsQueryService, RestaurantsQueryService>();
+            services.AddSingleton<IJustEatQueryClient, JustEatQueryClient>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -56,7 +50,7 @@ namespace Qzk.CodingTest
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Restaurants}/{action=OpenRestaurants}/{criteria?}");
             });
         }
     }

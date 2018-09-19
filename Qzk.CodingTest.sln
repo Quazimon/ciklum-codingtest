@@ -3,7 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2019
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qzk.CodingTest", "Qzk.CodingTest\Qzk.CodingTest.csproj", "{DE8D4013-471A-4B2A-8F43-3B25607B2F31}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qzk.CodingTest", "Qzk.CodingTest\Qzk.CodingTest.csproj", "{DE8D4013-471A-4B2A-8F43-3B25607B2F31}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qzk.CodingTest.Core", "Qzk.CodingTest.Core\Qzk.CodingTest.Core.csproj", "{2ACFD6B7-5CC3-4FE3-874B-D32BCDF7CF81}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Qzk.CodingTest.Entities", "Qzk.CodingTest.Entities\Qzk.CodingTest.Entities.csproj", "{9F344814-66F0-4E50-AA6F-700D4B8D8EB2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Qzk.CodingTest.Core.Tests", "Qzk.CodingTest.Core.Tests\Qzk.CodingTest.Core.Tests.csproj", "{30F791E0-9D4E-473C-99B8-BF8A2D2FB6D0}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +21,18 @@ Global
 		{DE8D4013-471A-4B2A-8F43-3B25607B2F31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DE8D4013-471A-4B2A-8F43-3B25607B2F31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DE8D4013-471A-4B2A-8F43-3B25607B2F31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2ACFD6B7-5CC3-4FE3-874B-D32BCDF7CF81}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2ACFD6B7-5CC3-4FE3-874B-D32BCDF7CF81}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2ACFD6B7-5CC3-4FE3-874B-D32BCDF7CF81}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2ACFD6B7-5CC3-4FE3-874B-D32BCDF7CF81}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9F344814-66F0-4E50-AA6F-700D4B8D8EB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9F344814-66F0-4E50-AA6F-700D4B8D8EB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9F344814-66F0-4E50-AA6F-700D4B8D8EB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9F344814-66F0-4E50-AA6F-700D4B8D8EB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30F791E0-9D4E-473C-99B8-BF8A2D2FB6D0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30F791E0-9D4E-473C-99B8-BF8A2D2FB6D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30F791E0-9D4E-473C-99B8-BF8A2D2FB6D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30F791E0-9D4E-473C-99B8-BF8A2D2FB6D0}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

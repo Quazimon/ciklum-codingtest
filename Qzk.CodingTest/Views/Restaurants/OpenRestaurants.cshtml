@@ -1,0 +1,46 @@
+﻿@model OpenRestaurantsViewModel
+
+@{
+    ViewData["Title"] = "Open restaurants";
+}
+
+<h3>Search for open restaurants:</h3>
+
+<form asp-controller="Restaurants" asp-action="OpenRestaurants">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="input-group">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="submit">Go!</button>
+                </span>
+                <input type="text" class="form-control" name="criteria" placeholder="Outcode should be used. Example: se19">
+            </div>
+        </div>
+    </div>
+</form>
+
+@if (Model.Restaurants != null && Model.Restaurants.Any())
+{   
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Rating</th>
+                <th>Cuisines</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var restaurant in Model.Restaurants)
+            {
+                <tr>
+                    <td>@restaurant.Name</td>
+                    <td>@restaurant.Rating</td>
+                    <td>@string.Join(", ", restaurant.Cuisines)</td>
+                </tr>
+            }
+    </table>
+}
+
+<script>
+
+</script>
